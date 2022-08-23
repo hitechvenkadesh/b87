@@ -3,8 +3,8 @@
 import boto3
 
 client = boto3.client('iam',
-	aws_access_key_id = "AKIAZWYPHV5U5GVI5SHR", 
-	aws_secret_access_key = "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")
+	aws_access_key_id = "AKIAQWT7NPGMZR4BIWGP", 
+	aws_secret_access_key = "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")
 
 myuser = client.list_users()
 
