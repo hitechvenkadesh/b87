@@ -1,10 +1,16 @@
 #List AWS IAM users
 
 import boto3
+import sys
+
+region=sys.argv[1]
+access_key=sys.argv[2]
+secret_key=sys.argv[3]
 
 client = boto3.client('iam',
-	aws_access_key_id = "AKIAZWYPHV5U5GVI5SHR", 
-	aws_secret_access_key = "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")
+	region_name = region
+	aws_access_key_id = access_key, 
+	aws_secret_access_key = secret_key)
 
 myuser = client.list_users()
 
